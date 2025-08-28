@@ -1,4 +1,4 @@
-name: GitHub Actions - Worflow Dispatch Template basic
+name: GitHub Actions - Worflow Dispatch Template
 run-name: Running - ${{ github.event_name }}
 on: [workflow_dispatch]
 

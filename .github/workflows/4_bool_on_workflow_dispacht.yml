@@ -1,0 +1,16 @@
+name: GitHub Actions - Worflow Dispatch Template - Boleano
+run-name: Running - ${{ github.event_name }}
+on: 
+  workflow_dispatch:
+    inputs:
+      severidade:
+        description: Funcionalidade Crítica
+        type: boolean            
+
+jobs:
+  on-workflow_dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comentário
+        run: |
+         echo "Comentário da Execução do Worflow Dispatch - ${{inputs.severidade}}"

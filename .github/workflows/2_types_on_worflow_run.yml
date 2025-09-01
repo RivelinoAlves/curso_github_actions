@@ -1,0 +1,16 @@
+name: GitHub Actions - Worflow Run Types
+run-name: Running - Worflow Run Types
+on: 
+  workflow_run:
+      workflows: [GitHub Actions - Trigger 1]
+      types: [completed]
+      # types: [completed]
+      # types: [in_progress]
+      # types: [completed, requested, in-progress]
+jobs:
+  on-workflow_dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comentário
+        run: |
+         echo "Worflow que foi trigado"

@@ -1,0 +1,28 @@
+name: GitHub Actions - Gerencimamento de Erros
+run-name: Running - Gerenciamento de Erros
+on: [push, workflow_dispatch]
+  
+jobs:
+
+    job_1_erros:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Comentário
+          run: |
+           echo Comentário antes do erro
+           exit 1
+        - name: Comentário
+          run: |
+           echo comentário após o erro   
+
+    job_2_always:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Comentário
+          run: |
+           echo Comentário antes do erro
+           exit 1
+        - name: Comentário
+          if: always()
+          run: |
+           echo comentário após o erro   

@@ -4,7 +4,7 @@ on: [push, workflow_dispatch]
   
 jobs:
     test_unit:
-      runs-on: ubunttu-20.04
+      runs-on: ubuntu-20.04
       steps:
         - name: Comentário
           run: |

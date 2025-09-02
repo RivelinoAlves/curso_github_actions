@@ -1,0 +1,20 @@
+name: GitHub Actions - Condicionais
+run-name: Running - Teste com dependência Condicionais
+on: [push, workflow_dispatch]
+  
+jobs:
+    on-push-only:
+      if: ${{ github.event_name == 'push'}}
+      runs-on: ubuntu-latest
+      steps:
+        - name: Comentário
+          run: |
+           echo ${{ GitHub.event_name}}
+
+    on-workflow-dispach_only:
+       if: ${{ github.event_name == 'workflow_dispatch' }}
+       runs-on: ubuntu-latest
+       steps:
+         - name: Comentário
+           run: |
+            echo ${{ GitHub.event_name}}
